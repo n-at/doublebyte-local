@@ -1,0 +1,8 @@
+{
+  "name": "doublebyte-local",
+  "version": "1.0.0",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.2"
+  }
+}

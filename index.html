@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/geopattern.min.js"></script>
+
+    <title>local.doublebyte.ru</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="card bg-white mt-5">
+            <div class="card-body">
+
+                <h1 class="text-center mb-3">
+                    local.doublebyte.ru
+                </h1>
+
+                <div class="row">
+                    <div class="col-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">QR</h5>
+                                <p>QR code generator</p>
+                                <div class="text-end">
+                                    <a href="/qr/" class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const pattern = GeoPattern.generate('local.doublebyte.ru', {
+            color: '#00b4cc',
+            generator: 'chevrons',
+        });
+        document.getElementsByTagName('body')[0].style.backgroundImage = pattern.toDataUrl();
+    </script>
+
+</body>
+</html>
