@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-bs-theme="">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -8,13 +8,14 @@
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/geopattern.min.js"></script>
+    <script src="assets/theme.js"></script>
 
     <title>local.doublebyte.ru</title>
 </head>
 <body>
 
     <div class="container">
-        <div class="card bg-white mt-5">
+        <div class="card mt-5">
             <div class="card-body">
 
                 <h1 class="text-center mb-3">local.doublebyte.ru</h1>
@@ -318,14 +319,39 @@
                         </div>
                     </div>
 
+                </div> <!-- .row -->
+
+                <div class="text-end">
+                    <div class="dropdown d-inline-block">
+                        <button id="theme" class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="bi bi-circle-half"></i>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <button id="theme-system-default" type="button" class="dropdown-item">
+                                    <i class="bi bi-circle-half"></i> System
+                                </button>
+                            </li>
+                            <li>
+                                <button id="theme-light" type="button" class="dropdown-item">
+                                    <i class="bi bi-sun"></i> Light
+                                </button>
+                            </li>
+                            <li>
+                                <button id="theme-dark" type="button" class="dropdown-item">
+                                    <i class="bi bi-moon-stars"></i> Dark
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            </div> <!-- .card-body -->
+        </div> <!-- .card -->
+    </div> <!-- .container -->
 
     <script>
         const pattern = GeoPattern.generate('local.doublebyte.ru', {
-            color: '#00b4cc',
+            color: '#1ea4cc',
             generator: 'chevrons',
         });
         document.getElementsByTagName('body')[0].style.backgroundImage = pattern.toDataUrl();
